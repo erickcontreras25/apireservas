@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200318060921_actTablaAdminComplejo.cs" />
+    <Compile Remove="Migrations\20200318060921_actTablaAdminComplejo.Designer.cs" />
+    <Compile Remove="Migrations\20200318061832_actualAdminComplejo.cs" />
+    <Compile Remove="Migrations\20200318061832_actualAdminComplejo.Designer.cs" />
+    <Compile Remove="Migrations\20200318063603_actualComplejo1.cs" />
+    <Compile Remove="Migrations\20200318063603_actualComplejo1.Designer.cs" />
+    <Compile Remove="Migrations\20200318064037_actualComplejo2.cs" />
+    <Compile Remove="Migrations\20200318064037_actualComplejo2.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+  </ItemGroup>
+
+</Project>

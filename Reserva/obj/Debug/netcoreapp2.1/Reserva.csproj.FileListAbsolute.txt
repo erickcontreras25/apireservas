@@ -1,0 +1,14 @@
+C:\Users\erick\source\repos\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.csprojAssemblyReference.cache
+C:\Users\erick\source\repos\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.csproj.CoreCompileInputs.cache
+C:\Users\erick\source\repos\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorAssemblyInfo.cache
+C:\Users\erick\source\repos\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorAssemblyInfo.cs
+C:\Users\erick\source\repos\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.AssemblyInfoInputs.cache
+C:\Users\erick\source\repos\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.AssemblyInfo.cs
+C:\Users\erick\source\repos\Reserva\Reserva\bin\Debug\netcoreapp2.1\Reserva.deps.json
+C:\Users\erick\source\repos\Reserva\Reserva\bin\Debug\netcoreapp2.1\Reserva.runtimeconfig.json
+C:\Users\erick\source\repos\Reserva\Reserva\bin\Debug\netcoreapp2.1\Reserva.runtimeconfig.dev.json
+C:\Users\erick\source\repos\Reserva\Reserva\bin\Debug\netcoreapp2.1\Reserva.dll
+C:\Users\erick\source\repos\Reserva\Reserva\bin\Debug\netcoreapp2.1\Reserva.pdb
+C:\Users\erick\source\repos\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorTargetAssemblyInfo.cache
+C:\Users\erick\source\repos\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.dll
+C:\Users\erick\source\repos\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.pdb
