@@ -19,31 +19,174 @@ namespace Reserva.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Reserva.Models.Admin", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
-                    b.Property<int>("idAdmin")
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken();
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("email")
-                        .HasColumnName("Email")
-                        .HasMaxLength(20);
+                    b.Property<string>("ClaimType");
 
-                    b.Property<string>("nombre")
-                        .HasColumnName("Nombre")
-                        .HasMaxLength(20);
+                    b.Property<string>("ClaimValue");
 
-                    b.Property<string>("password")
-                        .HasColumnName("Password")
-                        .HasMaxLength(20);
+                    b.Property<string>("RoleId")
+                        .IsRequired();
 
-                    b.Property<bool>("rol")
-                        .HasColumnName("Rol")
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ClaimType");
+
+                    b.Property<string>("ClaimValue");
+
+                    b.Property<string>("UserId")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("LoginProvider");
+
+                    b.Property<string>("ProviderKey");
+
+                    b.Property<string>("ProviderDisplayName");
+
+                    b.Property<string>("UserId")
+                        .IsRequired();
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("UserId");
+
+                    b.Property<string>("RoleId");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("UserId");
+
+                    b.Property<string>("LoginProvider");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Value");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("Reserva.Models.ApplicationUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("AccessFailedCount");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken();
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256);
+
+                    b.Property<bool>("EmailConfirmed");
+
+                    b.Property<bool>("LockoutEnabled");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("PasswordHash");
+
+                    b.Property<string>("PhoneNumber");
+
+                    b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<string>("SecurityStamp");
+
+                    b.Property<bool>("TwoFactorEnabled");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256);
+
+                    b.Property<decimal>("edad")
+                        .HasColumnType("decimal");
+
+                    b.Property<bool>("isAdmin")
                         .HasColumnType("bit");
 
-                    b.HasKey("idAdmin");
+                    b.Property<string>("nombreUsuario")
+                        .HasColumnType("nvarchar(150)");
 
-                    b.ToTable("Admin");
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers");
                 });
 
             modelBuilder.Entity("Reserva.Models.Cancha", b =>
@@ -52,9 +195,9 @@ namespace Reserva.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("estado")
-                        .HasColumnName("Estado")
-                        .HasMaxLength(20);
+                    b.Property<byte[]>("foto")
+                        .HasColumnName("Imagen")
+                        .HasColumnType("Image");
 
                     b.Property<int>("idComplejo")
                         .HasColumnName("idComplejo")
@@ -63,6 +206,10 @@ namespace Reserva.Migrations
                     b.Property<int>("precio")
                         .HasColumnName("Precio")
                         .HasColumnType("int");
+
+                    b.Property<string>("tamanioCancha")
+                        .HasColumnName("Tamanio")
+                        .HasMaxLength(20);
 
                     b.HasKey("idCancha");
 
@@ -77,25 +224,57 @@ namespace Reserva.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("cantCanchas")
-                        .HasColumnName("CantidadDeCanchas")
-                        .HasColumnType("int");
+                    b.Property<bool>("estado")
+                        .HasColumnName("Estado")
+                        .HasColumnType("bit");
 
-                    b.Property<int>("idAdmin")
-                        .HasColumnName("idAdmin")
-                        .HasColumnType("int");
+                    b.Property<byte[]>("foto")
+                        .HasColumnName("Imagen")
+                        .HasColumnType("Image");
+
+                    b.Property<DateTime>("horaCierre")
+                        .HasColumnName("HoraCierre")
+                        .HasColumnType("Datetime");
+
+                    b.Property<DateTime>("horaInicio")
+                        .HasColumnName("HoraInicio")
+                        .HasColumnType("Datetime");
+
+                    b.Property<float?>("latitud")
+                        .HasColumnName("Latitud")
+                        .HasColumnType("real");
 
                     b.Property<string>("localidad")
                         .HasColumnName("Localidad")
                         .HasMaxLength(20);
 
+                    b.Property<float?>("longitud")
+                        .HasColumnName("Longitud")
+                        .HasColumnType("real");
+
                     b.Property<string>("nombre")
                         .HasColumnName("Nombre")
                         .HasMaxLength(20);
 
+                    b.Property<string>("numero")
+                        .HasColumnName("Numero")
+                        .HasMaxLength(20);
+
+                    b.Property<bool>("parqueo")
+                        .HasColumnName("Parqueo")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("seguridad")
+                        .HasColumnName("Seguridad")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("userId")
+                        .HasColumnName("userId")
+                        .HasMaxLength(450);
+
                     b.HasKey("idComplejo");
 
-                    b.HasIndex("idAdmin");
+                    b.HasIndex("userId");
 
                     b.ToTable("Complejo");
                 });
@@ -106,19 +285,36 @@ namespace Reserva.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("idUsuario")
-                        .HasColumnName("IdUsuario")
+                    b.Property<int>("cantJugadores")
+                        .HasColumnName("CantidadJug")
                         .HasColumnType("int");
 
                     b.Property<string>("nombre")
                         .HasColumnName("Nombre")
                         .HasMaxLength(20);
 
+                    b.Property<string>("userId")
+                        .HasColumnName("userId")
+                        .HasMaxLength(450);
+
                     b.HasKey("idEquipo");
 
-                    b.HasIndex("idUsuario");
+                    b.HasIndex("userId");
 
                     b.ToTable("Equipo");
+                });
+
+            modelBuilder.Entity("Reserva.Models.EquipoUser", b =>
+                {
+                    b.Property<int>("equipoId");
+
+                    b.Property<string>("userId");
+
+                    b.HasKey("equipoId", "userId");
+
+                    b.HasIndex("userId");
+
+                    b.ToTable("EquipoUser");
                 });
 
             modelBuilder.Entity("Reserva.Models.Reservaciones", b =>
@@ -139,15 +335,21 @@ namespace Reserva.Migrations
                         .HasColumnName("idCancha")
                         .HasColumnType("int");
 
-                    b.Property<int>("idUsuario")
-                        .HasColumnName("IdUsuario")
-                        .HasColumnType("int");
+                    b.Property<bool>("pago")
+                        .HasColumnName("Pago")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("pagoParcial");
+
+                    b.Property<string>("userId")
+                        .HasColumnName("userId")
+                        .HasMaxLength(450);
 
                     b.HasKey("idReservacion");
 
                     b.HasIndex("idCancha");
 
-                    b.HasIndex("idUsuario");
+                    b.HasIndex("userId");
 
                     b.ToTable("Reservacion");
                 });
@@ -162,52 +364,93 @@ namespace Reserva.Migrations
                         .HasColumnName("CantidadEquipos")
                         .HasColumnType("decimal");
 
-                    b.Property<string>("nombreTorneo")
-                        .HasColumnName("NombreTorneo")
+                    b.Property<string>("descripcion")
+                        .HasColumnName("Descripcion")
                         .HasMaxLength(20);
 
-                    b.Property<string>("premio")
-                        .HasColumnName("Premio")
-                        .HasMaxLength(20);
+                    b.Property<DateTime>("diaTorneo")
+                        .HasColumnName("DiaTorneo")
+                        .HasColumnType("Datetime");
 
-                    b.HasKey("idTorneo");
-
-                    b.ToTable("Torneo");
-                });
-
-            modelBuilder.Entity("Reserva.Models.Usuario", b =>
-                {
-                    b.Property<int>("idUsuario")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<decimal>("edad")
-                        .HasColumnName("Edad")
-                        .HasColumnType("decimal");
-
-                    b.Property<string>("email")
-                        .HasColumnName("Email")
-                        .HasMaxLength(20);
+                    b.Property<int>("idComplejo")
+                        .HasColumnName("idComplejo")
+                        .HasColumnType("int");
 
                     b.Property<string>("nombre")
                         .HasColumnName("Nombre")
                         .HasMaxLength(20);
 
-                    b.Property<string>("nombreUsuario")
-                        .HasColumnName("NombreUsuario")
-                        .HasMaxLength(20);
+                    b.Property<byte[]>("premioFoto")
+                        .HasColumnName("PremioFoto")
+                        .HasColumnType("Image");
 
-                    b.Property<string>("password")
-                        .HasColumnName("Password")
-                        .HasMaxLength(20);
+                    b.Property<string>("usuarioId")
+                        .HasColumnName("UsuarioId")
+                        .HasMaxLength(450);
 
-                    b.Property<bool>("rol")
-                        .HasColumnName("Rol")
-                        .HasColumnType("bit");
+                    b.HasKey("idTorneo");
 
-                    b.HasKey("idUsuario");
+                    b.HasIndex("idComplejo");
 
-                    b.ToTable("Usuario");
+                    b.ToTable("Torneo");
+                });
+
+            modelBuilder.Entity("Reserva.Models.TorneoEquipo", b =>
+                {
+                    b.Property<int>("torneoId");
+
+                    b.Property<int>("equipoId");
+
+                    b.HasKey("torneoId", "equipoId");
+
+                    b.HasIndex("equipoId");
+
+                    b.ToTable("TorneoEquipo");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.HasOne("Reserva.Models.ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.HasOne("Reserva.Models.ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Reserva.Models.ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.HasOne("Reserva.Models.ApplicationUser")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Reserva.Models.Cancha", b =>
@@ -220,17 +463,28 @@ namespace Reserva.Migrations
 
             modelBuilder.Entity("Reserva.Models.Complejo", b =>
                 {
-                    b.HasOne("Reserva.Models.Admin", "admin")
+                    b.HasOne("Reserva.Models.ApplicationUser", "user")
                         .WithMany()
-                        .HasForeignKey("idAdmin")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("userId");
                 });
 
             modelBuilder.Entity("Reserva.Models.Equipo", b =>
                 {
-                    b.HasOne("Reserva.Models.Usuario", "usuario")
+                    b.HasOne("Reserva.Models.ApplicationUser", "user")
                         .WithMany()
-                        .HasForeignKey("idUsuario")
+                        .HasForeignKey("userId");
+                });
+
+            modelBuilder.Entity("Reserva.Models.EquipoUser", b =>
+                {
+                    b.HasOne("Reserva.Models.Equipo", "equipo")
+                        .WithMany("equipoUser")
+                        .HasForeignKey("equipoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Reserva.Models.ApplicationUser", "user")
+                        .WithMany("equipoUser")
+                        .HasForeignKey("userId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -241,9 +495,29 @@ namespace Reserva.Migrations
                         .HasForeignKey("idCancha")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Reserva.Models.Usuario", "usuario")
+                    b.HasOne("Reserva.Models.ApplicationUser", "user")
                         .WithMany()
-                        .HasForeignKey("idUsuario")
+                        .HasForeignKey("userId");
+                });
+
+            modelBuilder.Entity("Reserva.Models.Torneo", b =>
+                {
+                    b.HasOne("Reserva.Models.Complejo", "complejo")
+                        .WithMany()
+                        .HasForeignKey("idComplejo")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Reserva.Models.TorneoEquipo", b =>
+                {
+                    b.HasOne("Reserva.Models.Equipo", "equipo")
+                        .WithMany("torneoEquipo")
+                        .HasForeignKey("equipoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Reserva.Models.Torneo", "torneo")
+                        .WithMany("torneoEquipo")
+                        .HasForeignKey("torneoId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

@@ -26,3 +26,61 @@ C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\Reserva\Reserva\obj
 C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorTargetAssemblyInfo.cache
 C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.dll
 C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.pdb
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\Reserva\Reserva\bin\Debug\netcoreapp2.1\Reserva.deps.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\Reserva\Reserva\bin\Debug\netcoreapp2.1\Reserva.runtimeconfig.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\Reserva\Reserva\bin\Debug\netcoreapp2.1\Reserva.runtimeconfig.dev.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\Reserva\Reserva\bin\Debug\netcoreapp2.1\Reserva.dll
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\Reserva\Reserva\bin\Debug\netcoreapp2.1\Reserva.pdb
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.csprojAssemblyReference.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.csproj.CoreCompileInputs.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorAssemblyInfo.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorAssemblyInfo.cs
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.AssemblyInfoInputs.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.AssemblyInfo.cs
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorTargetAssemblyInfo.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.dll
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.pdb
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para torneo y equipo\Reserva\Reserva\bin\Debug\netcoreapp2.1\Reserva.deps.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para torneo y equipo\Reserva\Reserva\bin\Debug\netcoreapp2.1\Reserva.runtimeconfig.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para torneo y equipo\Reserva\Reserva\bin\Debug\netcoreapp2.1\Reserva.runtimeconfig.dev.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para torneo y equipo\Reserva\Reserva\bin\Debug\netcoreapp2.1\Reserva.dll
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para torneo y equipo\Reserva\Reserva\bin\Debug\netcoreapp2.1\Reserva.pdb
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para torneo y equipo\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.csprojAssemblyReference.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para torneo y equipo\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.csproj.CoreCompileInputs.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para torneo y equipo\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorAssemblyInfo.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para torneo y equipo\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorAssemblyInfo.cs
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para torneo y equipo\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.AssemblyInfoInputs.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para torneo y equipo\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.AssemblyInfo.cs
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para torneo y equipo\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorTargetAssemblyInfo.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para torneo y equipo\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.dll
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para torneo y equipo\Reserva\Reserva\obj\Debug\netcoreapp2.1\Reserva.pdb
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\bin\Debug\netcoreapp2.1\Reserva.deps.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\bin\Debug\netcoreapp2.1\Reserva.runtimeconfig.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\bin\Debug\netcoreapp2.1\Reserva.runtimeconfig.dev.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\bin\Debug\netcoreapp2.1\Reserva.dll
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\bin\Debug\netcoreapp2.1\Reserva.pdb
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\obj\Debug\netcoreapp2.1\Reserva.csprojAssemblyReference.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorAssemblyInfo.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorAssemblyInfo.cs
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\obj\Debug\netcoreapp2.1\Reserva.AssemblyInfoInputs.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\obj\Debug\netcoreapp2.1\Reserva.AssemblyInfo.cs
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorTargetAssemblyInfo.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\obj\Debug\netcoreapp2.1\Reserva.dll
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\obj\Debug\netcoreapp2.1\Reserva.pdb
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\nuevo con tablas para reto\Reserva\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\configurado con tmd\Reserva\bin\Debug\netcoreapp2.1\Reserva.deps.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\configurado con tmd\Reserva\bin\Debug\netcoreapp2.1\Reserva.runtimeconfig.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\configurado con tmd\Reserva\bin\Debug\netcoreapp2.1\Reserva.runtimeconfig.dev.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\configurado con tmd\Reserva\bin\Debug\netcoreapp2.1\Reserva.dll
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\configurado con tmd\Reserva\bin\Debug\netcoreapp2.1\Reserva.pdb
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\configurado con tmd\Reserva\obj\Debug\netcoreapp2.1\Reserva.csprojAssemblyReference.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\configurado con tmd\Reserva\obj\Debug\netcoreapp2.1\Reserva.csproj.CoreCompileInputs.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\configurado con tmd\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorAssemblyInfo.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\configurado con tmd\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorAssemblyInfo.cs
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\configurado con tmd\Reserva\obj\Debug\netcoreapp2.1\Reserva.AssemblyInfoInputs.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\configurado con tmd\Reserva\obj\Debug\netcoreapp2.1\Reserva.AssemblyInfo.cs
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\configurado con tmd\Reserva\obj\Debug\netcoreapp2.1\Reserva.RazorTargetAssemblyInfo.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\configurado con tmd\Reserva\obj\Debug\netcoreapp2.1\Reserva.dll
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\configurado con tmd\Reserva\obj\Debug\netcoreapp2.1\Reserva.pdb

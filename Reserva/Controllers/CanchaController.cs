@@ -25,9 +25,14 @@ namespace Reserva.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Cancha>>> getCancha([FromQuery] decimal n1)
+        public async Task<ActionResult<IEnumerable<Cancha>>> getCancha()
         {
-            //return await _Db.Cancha.ToArrayAsync();
+            return await _Db.Cancha.Include(x => x.complejo).ToArrayAsync();
+        }
+
+        [HttpGet("p")]
+        public async Task<ActionResult<IEnumerable<Cancha>>> getCanchaComplejo([FromQuery] decimal n1)
+        {
             return await _Db.Cancha.Include(x => x.complejo).Where(y=>y.idComplejo==n1).ToArrayAsync();
         }
 

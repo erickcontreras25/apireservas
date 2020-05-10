@@ -13,7 +13,8 @@ namespace Reserva.Models
         [Key]
         public int idCancha { get; set; }
         public int precio { get; set; }
-        public string estado { get; set; }
+        public string foto { get; set; }
+        public string tamanioCancha { get; set; }
         public int idComplejo { get; set; }
         public Complejo complejo { get; set; }
 
@@ -24,7 +25,8 @@ namespace Reserva.Models
             {
                 _cancha.HasKey(x => x.idCancha);
                 _cancha.Property(x => x.precio).HasColumnName("Precio").HasColumnType("int");
-                _cancha.Property(x => x.estado).HasColumnName("Estado").HasMaxLength(20);
+                _cancha.Property(x => x.foto).HasColumnName("Imagen").HasColumnType("Image");
+                _cancha.Property(x => x.tamanioCancha).HasColumnName("Tamanio").HasMaxLength(20);
                 _cancha.Property(x => x.idComplejo).HasColumnName("idComplejo").HasColumnType("int");
                 _cancha.HasOne(x => x.complejo);
             }

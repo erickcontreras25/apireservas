@@ -13,8 +13,11 @@ namespace Reserva.Models
         [Key]
         public int idEquipo { get; set; }
         public string nombre { get; set; }
-        public int idUsuario { get; set; }
-        public Usuario usuario { get; set; }
+        public int cantJugadores { get; set; }
+        public string userId { get; set; }        
+        public ApplicationUser user { get; set; }
+        public List<EquipoUser> equipoUser { get; set; }
+        public List<TorneoEquipo> torneoEquipo { get; set; }
 
         public class Map
         {
@@ -22,8 +25,9 @@ namespace Reserva.Models
             {
                 _equipo.HasKey(x => x.idEquipo);
                 _equipo.Property(x => x.nombre).HasColumnName("Nombre").HasMaxLength(20);
-                _equipo.Property(x => x.idUsuario).HasColumnName("IdUsuario").HasColumnType("int");
-                _equipo.HasOne(x => x.usuario);
+                _equipo.Property(x => x.cantJugadores).HasColumnName("CantidadJug").HasColumnType("int");
+                _equipo.Property(x => x.userId).HasColumnName("userId").HasMaxLength(450);
+                _equipo.HasOne(x => x.user);
             }
         }
     }

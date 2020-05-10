@@ -27,20 +27,20 @@ namespace Reserva.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Equipo>>> getEquipo()
         {
-            return await _db.Equipo.Include(x => x.usuario).ToArrayAsync();
+            return await _db.Equipo.OrderBy(x=>x.nombre).ToArrayAsync();
         }
 
         [HttpGet("p")]
-        [Route("api/equipoUsuario")]
-        public async Task<ActionResult<IEnumerable<Equipo>>> getEquipoFiltrado([FromQuery] decimal n1)
+        public async Task<ActionResult<IEnumerable<Equipo>>> getEquipoxUser([FromQuery] string n1)
         {
-            return await _db.Equipo.Include(x => x.usuario).Where(y=>y.idUsuario==n1).ToArrayAsync();
+            return await _db.Equipo.Where(x=>x.userId == n1).ToArrayAsync();
         }
+
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Equipo>> getEquipoId(int id)
         {
-            return await _db.Equipo.Include(x => x.usuario).FirstOrDefaultAsync(i => i.idEquipo == id);
+            return await _db.Equipo.Include(x=>x.user).FirstOrDefaultAsync(i => i.idEquipo == id);
         }
 
         [HttpPost]
@@ -57,23 +57,37 @@ namespace Reserva.Controllers
             }
         }
 
-        [HttpPut("{idComplejo}")]
+        [HttpPut("{idEquipo}")]
 
         public async Task<ActionResult> putEquipo(int idEquipo, Equipo equipo)
         {
+            var cat = await _db.Torneo.FindAsync(idEquipo);
+            var c = await _db.EquipoUser.Where(x => x.equipoId == idEquipo).ToArrayAsync();
+            var v = c.Length;
 
-            if (idEquipo == equipo.idEquipo)
+            if(equipo.cantJugadores >= v)
             {
-                _db.Entry(equipo).State = EntityState.Modified;
-                await _db.SaveChangesAsync();
-                return Ok();
+                if (idEquipo == equipo.idEquipo)
+                {
+                    _db.Entry(equipo).State = EntityState.Modified;
+                    await _db.SaveChangesAsync();
+                    return Ok("Exito");
+                } else
+                {
+                    return BadRequest();
+                }
             }
+            else
+            {
+                return BadRequest("La cantidad de jugadores no puede ser menor que los inscritos.");
+            }
+            
 
-            return BadRequest();
+            
 
         }
 
-        [HttpDelete("{idComplejo}")]
+        [HttpDelete("{idEquipo}")]
         public async Task<ActionResult> deleteEquipo(int idEquipo)
         {
             var equipo = await _db.Equipo.FindAsync(idEquipo);

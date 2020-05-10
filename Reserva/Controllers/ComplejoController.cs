@@ -26,20 +26,25 @@ namespace Reserva.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Complejo>>> getComplejo()
         {
-            return await _Db.Complejo.Include(x=>x.admin).ToArrayAsync();
+            return await _Db.Complejo.Include(x=>x.user).OrderBy(y=>y.nombre).ToArrayAsync();
         }
 
         [HttpGet("p")]
-        public async Task<ActionResult<IEnumerable<Complejo>>> getComplejoFiltrado([FromQuery] decimal n1)
+        public async Task<ActionResult<IEnumerable<Complejo>>> getComplejoFiltrado([FromQuery] string n1)
         {
-            return await _Db.Complejo.Include(x => x.admin).Where(y => y.idAdmin == n1).ToArrayAsync();
+            return await _Db.Complejo.Include(x => x.user).Where(y => y.userId == n1).ToArrayAsync();
+        }
+        [HttpGet("q")]
+        public async Task<ActionResult<IEnumerable<Complejo>>> getComplejoEstado([FromQuery] bool n1)
+        {
+            return await _Db.Complejo.Include(x => x.user).Where(y => y.estado == true).ToArrayAsync();
         }
 
-        
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Complejo>> getComplejoId(int id)
         {
-            return await _Db.Complejo.Include(x=>x.admin).FirstOrDefaultAsync(i => i.idComplejo == id);
+            return await _Db.Complejo.Include(x=>x.user).FirstOrDefaultAsync(i => i.idComplejo == id);
         }
 
         [HttpPost]

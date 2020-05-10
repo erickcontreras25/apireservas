@@ -25,10 +25,24 @@ namespace Reserva.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Reservaciones>>> getReservacion([FromQuery] decimal n1)
+        public async Task<ActionResult<IEnumerable<Reservaciones>>> getReservaciones()
         {
             //return await _db.Reservacion.ToArrayAsync();
-            return await _db.Reservacion.Include(x => x.usuario).Where(y => y.idUsuario == n1).Include(y=>y.cancha).Include(z=>z.cancha.complejo).ToArrayAsync();
+            return await _db.Reservacion.Include(x => x.user).Include(y => y.cancha).Include(z => z.cancha.complejo).OrderByDescending(h => h.horaInicial).ToArrayAsync();
+        }
+
+
+        [HttpGet("q")]
+        public async Task<ActionResult<IEnumerable<Reservaciones>>> getReservacionCancha([FromQuery] decimal n1)
+        {
+            return await _db.Reservacion.Include(x => x.user).Where(y => y.cancha.idComplejo == n1).Include(y => y.cancha).Include(z => z.cancha.complejo).OrderByDescending(h => h.horaInicial).ToArrayAsync();
+        }
+
+
+        [HttpGet("p")]
+        public async Task<ActionResult<IEnumerable<Reservaciones>>> getReservacion([FromQuery] string n1)
+        {
+            return await _db.Reservacion.Include(x => x.user).Where(y => y.userId == n1).Include(y=>y.cancha).Include(z=>z.cancha.complejo).OrderByDescending(h=>h.horaInicial).ToArrayAsync();
         }
 
         [HttpGet("{id}")]

@@ -14,10 +14,12 @@ namespace Reserva.Models
         public int idReservacion { get; set; }
         public DateTime horaInicial { get; set; }
         public DateTime horaFinal { get; set; }
+        public bool pago { get; set; }
+        public bool pagoParcial { get; set; }
         public int idCancha { get; set; }
         public Cancha cancha { get; set; }
-        public int idUsuario { get; set; }
-        public Usuario usuario { get; set; }
+        public string userId { get; set; }
+        public ApplicationUser user { get; set; }
 
 
         public class Map
@@ -27,10 +29,11 @@ namespace Reserva.Models
                 _reservacion.HasKey(x => x.idReservacion);
                 _reservacion.Property(x => x.horaInicial).HasColumnName("HoraInicial").HasColumnType("Datetime");
                 _reservacion.Property(x => x.horaFinal).HasColumnName("HoraFinal").HasColumnType("Datetime");
+                _reservacion.Property(x=>x.pago).HasColumnName("Pago").HasColumnType("bit");
                 _reservacion.Property(x => x.idCancha).HasColumnName("idCancha").HasColumnType("int");
                 _reservacion.HasOne(x => x.cancha);
-                _reservacion.Property(x => x.idUsuario).HasColumnName("IdUsuario").HasColumnType("int");
-                _reservacion.HasOne(x => x.usuario);
+                _reservacion.Property(x => x.userId).HasColumnName("userId").HasMaxLength(450);
+                _reservacion.HasOne(x => x.user);
             }
         }
     }

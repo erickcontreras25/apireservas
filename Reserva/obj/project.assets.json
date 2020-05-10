@@ -12604,11 +12604,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\Reserva\\Reserva\\Reserva.csproj",
+      "projectUniqueName": "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\configurado con tmd\\Reserva\\Reserva.csproj",
       "projectName": "Reserva",
-      "projectPath": "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\Reserva\\Reserva\\Reserva.csproj",
+      "projectPath": "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\configurado con tmd\\Reserva\\Reserva.csproj",
       "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\Reserva\\Reserva\\obj\\",
+      "outputPath": "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\configurado con tmd\\Reserva\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
