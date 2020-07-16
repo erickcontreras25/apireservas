@@ -13,6 +13,7 @@ namespace Reserva.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class UserController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;

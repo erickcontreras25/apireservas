@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Reserva.AppService;
 using Reserva.Models;
 using Reserva;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace Reserva.Controllers
 {
@@ -25,18 +27,21 @@ namespace Reserva.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<Cancha>>> getCancha()
         {
             return await _Db.Cancha.Include(x => x.complejo).ToArrayAsync();
         }
 
         [HttpGet("p")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<Cancha>>> getCanchaComplejo([FromQuery] decimal n1)
         {
             return await _Db.Cancha.Include(x => x.complejo).Where(y=>y.idComplejo==n1).ToArrayAsync();
         }
 
         [HttpGet("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<Cancha>> getCanchaId(int id)
         {
             return await _Db.Cancha.Include(x => x.complejo).FirstOrDefaultAsync(i => i.idCancha == id);

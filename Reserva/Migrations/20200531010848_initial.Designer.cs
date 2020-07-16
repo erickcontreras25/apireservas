@@ -10,7 +10,7 @@ using Reserva;
 namespace Reserva.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20200509034640_initial")]
+    [Migration("20200531010848_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +24,7 @@ namespace Reserva.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<EquipoUser>>> getEquipoUser()
         {
             return await _context.EquipoUser.ToArrayAsync();
@@ -28,6 +32,7 @@ namespace Reserva.Controllers
         }
 
         [HttpGet("p")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<EquipoUser>>> getEquipoUserxUser([FromQuery] string n1)
         {
             return await _context.EquipoUser.Include(x => x.equipo).Where(x=>x.userId == n1).ToArrayAsync();
@@ -35,6 +40,7 @@ namespace Reserva.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<EquipoUser>>> getEquipoUserId(int id)
         {
             return await _context.EquipoUser.Include(x => x.user).Where(x => x.equipoId == id).ToArrayAsync();

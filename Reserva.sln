@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1022
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reserva", "Reserva\Reserva.csproj", "{C6CB50ED-5A50-4EE2-9488-DF3828EF8CA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reserva", "Reserva\Reserva.csproj", "{C6CB50ED-5A50-4EE2-9488-DF3828EF8CA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestP", "UnitTestP\UnitTestP.csproj", "{0ED96BA8-96D4-43B3-913D-1E964305AD31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C6CB50ED-5A50-4EE2-9488-DF3828EF8CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6CB50ED-5A50-4EE2-9488-DF3828EF8CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6CB50ED-5A50-4EE2-9488-DF3828EF8CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ED96BA8-96D4-43B3-913D-1E964305AD31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED96BA8-96D4-43B3-913D-1E964305AD31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED96BA8-96D4-43B3-913D-1E964305AD31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED96BA8-96D4-43B3-913D-1E964305AD31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +27,7 @@ namespace Reserva.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<Reservaciones>>> getReservaciones()
         {
             //return await _db.Reservacion.ToArrayAsync();
@@ -33,22 +36,25 @@ namespace Reserva.Controllers
 
 
         [HttpGet("q")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<Reservaciones>>> getReservacionCancha([FromQuery] decimal n1)
         {
-            return await _db.Reservacion.Include(x => x.user).Where(y => y.cancha.idComplejo == n1).Include(y => y.cancha).Include(z => z.cancha.complejo).OrderByDescending(h => h.horaInicial).ToArrayAsync();
+            return await _db.Reservacion.Include(x => x.user).Where(y => y.cancha.idComplejo == n1).OrderByDescending(h => h.horaInicial).ToArrayAsync();
         }
 
 
         [HttpGet("p")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<Reservaciones>>> getReservacion([FromQuery] string n1)
         {
             return await _db.Reservacion.Include(x => x.user).Where(y => y.userId == n1).Include(y=>y.cancha).Include(z=>z.cancha.complejo).OrderByDescending(h=>h.horaInicial).ToArrayAsync();
         }
 
         [HttpGet("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<Reservaciones>> getReservacionId(int id)
         {
-            return await _db.Reservacion.Include(y => y.cancha).FirstOrDefaultAsync(i => i.idReservacion == id);
+            return await _db.Reservacion.Include(y => y.cancha).Include(z =>z.user).FirstOrDefaultAsync(i => i.idReservacion == id);
         }
 
         [HttpPost]

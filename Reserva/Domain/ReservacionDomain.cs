@@ -17,10 +17,12 @@ namespace Reserva.Domain
 
             bool malaFecha = reservacion.horaInicial > reservacion.horaFinal;
             bool malaFecha2 = reservacion.horaInicial == reservacion.horaFinal;
-            var idCan = reservacion.idCancha == 0;
+            var idCan = reservacion.idCancha;
             var hora = reservacion.idCancha;
-            var idUs = reservacion.userId == "";
-            var result = DateTime.Compare(reservacion.horaFinal, reservacion.horaInicial);
+            var idUs = reservacion.userId == string.Empty;
+            var res = reservacion.horaFinal - reservacion.horaInicial;
+            var r = res.TotalHours;
+            //var result = DateTime.Compare(reservacion.horaFinal, reservacion.horaInicial);
 
             if (malaFecha)
             {
@@ -30,7 +32,7 @@ namespace Reserva.Domain
             {
                 return "La hora final no puede ser igual que la inicial.";
             }
-            if (idCan)
+            if (idCan == 0)
             {
                 return "La cancha no puede ser nulo.";
             }
@@ -38,7 +40,7 @@ namespace Reserva.Domain
             {
                 return "El usuario no puede ser nulo.";
             }
-            if (result >= 4)
+            if (r >= 4)
             {
                 return "No puede reservar por mas de 4 horas.";
             }

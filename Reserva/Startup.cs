@@ -57,7 +57,7 @@ namespace Reserva
 
 
             //services.AddDbContext<DBContext>(opciones => opciones.UseSqlServer("Data Source=DESKTOP-PKMVCOP;Initial Catalog=Reserva;Trusted_Connection=True"));
-            services.AddDbContext<DBContext>(opciones => opciones.UseSqlServer("Server=216.155.157.158;Initial Catalog=canchasdb;Persist Security Info=False;User ID=erick;Password=g8_I62ml;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;"));
+            services.AddDbContext<DBContext>(opciones => opciones.UseSqlServer("Data Source=216.155.157.158;Integrated Security=False;User ID=alejandro;Password=if^jR548;Connect Timeout=15;Encrypt=False;Packet Size=4096"));
 
 
             services.AddIdentity<ApplicationUser, IdentityRole>(options => {

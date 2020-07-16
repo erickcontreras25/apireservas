@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -24,17 +26,20 @@ namespace Reserva.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<Complejo>>> getComplejo()
         {
             return await _Db.Complejo.Include(x=>x.user).OrderBy(y=>y.nombre).ToArrayAsync();
         }
 
         [HttpGet("p")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<Complejo>>> getComplejoFiltrado([FromQuery] string n1)
         {
             return await _Db.Complejo.Include(x => x.user).Where(y => y.userId == n1).ToArrayAsync();
         }
         [HttpGet("q")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<Complejo>>> getComplejoEstado([FromQuery] bool n1)
         {
             return await _Db.Complejo.Include(x => x.user).Where(y => y.estado == true).ToArrayAsync();
@@ -46,7 +51,7 @@ namespace Reserva.Controllers
         {
             return await _Db.Complejo.Include(x=>x.user).FirstOrDefaultAsync(i => i.idComplejo == id);
         }
-
+        
         [HttpPost]
         public async Task<ActionResult<Complejo>> postComplejo(Complejo complejo)
         {
@@ -62,7 +67,6 @@ namespace Reserva.Controllers
         }
 
         [HttpPut("{idComplejo}")]
-
         public async Task<ActionResult> putComplejo(int idComplejo, Complejo complejo)
         {
 

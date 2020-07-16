@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\nuevo con registro y login\\nuevo con tablas para reto\\Reserva\\Reserva.csproj": {}
+    "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\nuevo con registro y login\\Reserva\\Reserva.csproj": {}
   },
   "projects": {
-    "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\nuevo con registro y login\\nuevo con tablas para reto\\Reserva\\Reserva.csproj": {
+    "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\nuevo con registro y login\\Reserva\\Reserva.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\nuevo con registro y login\\nuevo con tablas para reto\\Reserva\\Reserva.csproj",
+        "projectUniqueName": "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\nuevo con registro y login\\Reserva\\Reserva.csproj",
         "projectName": "Reserva",
-        "projectPath": "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\nuevo con registro y login\\nuevo con tablas para reto\\Reserva\\Reserva.csproj",
+        "projectPath": "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\nuevo con registro y login\\Reserva\\Reserva.csproj",
         "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\nuevo con registro y login\\nuevo con tablas para reto\\Reserva\\obj\\",
+        "outputPath": "C:\\Users\\erick\\OneDrive\\Desktop\\api\\actulalizado al 19 marzo\\nuevo con registro y login\\Reserva\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

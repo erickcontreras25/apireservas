@@ -17,9 +17,9 @@ namespace Reserva.Domain
 
 
             int maximoCarcteresParaNombre = 20;
-            int cantidadDeCanchas;
             var nombreEsDemasiadoLargo = complejo.nombre.Count() > maximoCarcteresParaNombre;
             var nombreEstaEnBlanco = complejo.nombre == string.Empty;
+            var direccionEnBlanco = complejo.localidad == string.Empty;
 
 
             if (nombreEstaEnBlanco)
@@ -31,6 +31,10 @@ namespace Reserva.Domain
             {
                 return "El nombre contiene mas caracteres de lo permitido.";
 
+            }
+            if (direccionEnBlanco)
+            {
+                return "La direccion no puede ser nulo";
             }
 
             return null;

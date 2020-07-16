@@ -1,0 +1,17 @@
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\bin\Debug\netcoreapp2.1\UnitTestP.deps.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\bin\Debug\netcoreapp2.1\UnitTestP.runtimeconfig.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\bin\Debug\netcoreapp2.1\UnitTestP.runtimeconfig.dev.json
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\bin\Debug\netcoreapp2.1\UnitTestP.dll
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\bin\Debug\netcoreapp2.1\UnitTestP.pdb
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\obj\Debug\netcoreapp2.1\UnitTestP.csprojAssemblyReference.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\obj\Debug\netcoreapp2.1\UnitTestP.csproj.CoreCompileInputs.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\obj\Debug\netcoreapp2.1\UnitTestP.AssemblyInfoInputs.cache
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\obj\Debug\netcoreapp2.1\UnitTestP.AssemblyInfo.cs
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\obj\Debug\netcoreapp2.1\UnitTestP.dll
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\obj\Debug\netcoreapp2.1\UnitTestP.pdb
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\bin\Debug\netcoreapp2.1\Reserva.dll
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\bin\Debug\netcoreapp2.1\Reserva.pdb
+C:\Users\erick\OneDrive\Desktop\api\actulalizado al 19 marzo\nuevo con registro y login\UnitTestP\obj\Debug\netcoreapp2.1\UnitTestP.csproj.CopyComplete

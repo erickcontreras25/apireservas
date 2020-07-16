@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +23,7 @@ namespace Reserva.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<TorneoEquipo>>> getTorneoEquipo()
         {
             return await _context.TorneoEquipo.ToArrayAsync();
@@ -29,6 +32,7 @@ namespace Reserva.Controllers
         }
 
         [HttpGet("p")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<TorneoEquipo>>> getTorneoEquipoxEquipo([FromQuery] int n1)
         {
             return await _context.TorneoEquipo.Where(x=>x.equipoId==n1).ToArrayAsync();
@@ -37,6 +41,7 @@ namespace Reserva.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<TorneoEquipo>>> getTorneoEquipoId(int id)
         {
             return await _context.TorneoEquipo.Include(x => x.equipo).Where(i => i.torneoId == id).ToArrayAsync();

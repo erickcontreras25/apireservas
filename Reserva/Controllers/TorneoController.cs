@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,19 +27,29 @@ namespace Reserva.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<Torneo>>> getTorneo()
         {
             return await _db.Torneo.Include(x=>x.complejo).OrderBy(x=>x.diaTorneo).ToArrayAsync();
         }
 
         [HttpGet("p")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<Torneo>>> getTorneoxUser([FromQuery] string n1)
         {
             return await _db.Torneo.Where(x=>x.usuarioId == n1).OrderByDescending(y=>y.diaTorneo).ToArrayAsync();
         }
 
+        [HttpGet("q")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult<IEnumerable<Torneo>>> getTorneoxComplejo([FromQuery] decimal id)
+        {
+            return await _db.Torneo.Where(x => x.idComplejo == id).ToArrayAsync();
+        }
+
 
         [HttpGet("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<Torneo>> getTorneoId(int id)
         {
             return await _db.Torneo.Include(x=>x.complejo).FirstOrDefaultAsync(i => i.idTorneo == id);
